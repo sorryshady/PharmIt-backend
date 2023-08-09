@@ -44,7 +44,7 @@ const addProduct = async(req, res) => {
   try{
     let response = productServiceInstance.addProduct(req.body)
     if (!response.code)
-      return res.status(200).json({ message: 'Deletion Successsful' })
+      return res.status(200).json({ message: 'Added Successsful' })
     else throw response
   }catch(error){
     return res.status(500).json(error)
